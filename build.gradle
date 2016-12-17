@@ -24,6 +24,11 @@ apply plugin: 'spring-boot'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+jar {
+ baseName = 'Mynewapp'
+ version = '1.0'
+}
+
 repositories {
 	mavenCentral()
 }
