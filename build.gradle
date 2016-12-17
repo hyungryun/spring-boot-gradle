@@ -24,9 +24,12 @@ apply plugin: 'spring-boot'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+version = '1.0.0'
 jar {
- baseName = 'Mynewapp'
- version = '1.0'
+    baseName = 'myapp'
+    version = version
+    archiveName = 'myapp.jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
 repositories {
